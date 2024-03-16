@@ -3,8 +3,7 @@ import Header from './Header'
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import {useNavigate} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
 
@@ -12,7 +11,6 @@ const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -27,49 +25,49 @@ const Login = () => {
 
     // name => name.current.value, 
     const message = checkValidData(
-      email.current?.value, 
+      email.current?.value,
       password.current?.value,
-      );
+    );
     // console.log(message);
-    setErrorMessage(message); 
+    setErrorMessage(message);
     if (message) return;
 
     if (!isSignInForm) {
       // Sign Up Logic
       createUserWithEmailAndPassword(
-        auth, 
-        email.current.value, 
+        auth,
+        email.current.value,
         password.current.value
-        )
+      )
         .then((userCredential) => {
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.value, 
+            displayName: name.current.value,
             photoURL: "https://avatars.githubusercontent.com/u/96473205?v=4"
           }).then(() => {
             // Profile updated!
             const { uid, email, displayName, photoURL } = auth.currentUser;
-        dispatch(addUser({
-          uid: uid,
-          email: email,
-          displayName: displayName,
-          photoURL: photoURL
-        }));
-            navigate("/browse");
+            dispatch(addUser({
+              uid: uid,
+              email: email,
+              displayName: displayName,
+              photoURL: photoURL
+            })
+            );
           })
-          .catch((error) => {
-            // An error occurred
-            setErrorMessage(error.message);
-          });
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
         });
-    }else {
+    } else {
       // Sign In Logic
-       signInWithEmailAndPassword(
+      signInWithEmailAndPassword(
         auth,
         email.current.value,
         password.current.value
@@ -77,8 +75,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
+          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -95,7 +92,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className='absolute'>
+      <div className='absolute h-screen w-screen object-cover'>
         <img src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="bg-img" />
       </div>
       <form
@@ -105,20 +102,20 @@ const Login = () => {
 
         {!isSignInForm && (
           <input
-          ref={name}
+            ref={name}
             type="text"
             placeholder='Full Name'
-            className='p-4 my-4 w-full bg-gray-700' />)}
+            className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />)}
         <input
           ref={email}
           type="text"
           placeholder='Email or phone number'
-          className='p-4 my-4 w-full bg-gray-700' />
+          className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
         <input
           ref={password}
           type="password"
           placeholder='Password'
-          className='p-4 my-4 w-full bg-gray-700' />
+          className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
 
         <p className='text-red-600 font-light'>{errorMessage}</p>
 
