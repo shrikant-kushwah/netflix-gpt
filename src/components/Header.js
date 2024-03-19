@@ -51,10 +51,10 @@ const Header = () => {
       <img className='w-48' src={LOGO} alt="logo" />
 
       {user && (<div className='flex p-4 gap-2'>
-        <img className='w-10 h-10'
+        <img className='w-12 h-12'
           src={user?.photoURL}
           alt="usericon" />
-        <button onClick={handleSignOut} className='bg-red-600 w-24 font-semibold h-10 text-white px-4 text-md rounded-md hover:bg-red-700 cursor-pointer'>Sign Out</button>
+        <button onClick={handleSignOut} className="py-2 px-4 mx-1 my-1 bg-red-600 font-semibold text-white rounded-lg hover:bg-red-700">Sign Out</button>
         {/* {
 <button
             className="ml-2 md:ml-4 cursor-pointer text-white px-2 py-2 h-10 mt-2 rounded bg-[#AA0101] md:bg-purple-600 md:hover:bg-purple-800 text-sm md:text-md"
