@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
@@ -59,31 +59,33 @@ const Header = () => {
   };
 
   return (
-    <div className='absolute flex justify-between w-screen px-4 py-1 bg-gradient-to-b from-black z-10'>
-      <img className='w-48' src={LOGO} alt="logo" />
+    <div className='absolute flex flex-col md:flex-row justify-between w-screen px-4 py-1 bg-gradient-to-b from-black z-10'>
+      <Link to="/">
+      <img className='w-48 mx-auto md:mx-0' src={LOGO} alt="logo" />
+      </Link>
 
-      {user && (<div className='flex p-4 gap-2'>
+      {user && (<div className='flex md:p-4 justify-center mt-[-8px] gap-2'>
        {showGptPage && ( <select
           onChange={handleLanguageChange}
-          className='bg-gray-800 text-white p-2 m-2 rounded-md'>
+          className='bg-gray-800 text-white p-2 m-1 md:m-2 rounded-md text-sm md:text-lg'>
           {SUPPORTED_LANGUAGES.map((lang) => (
             <option
               className='bg-white text-black rounded-lg'
               key={lang.identifier}
               value={lang.identifier}>
               {lang.name}
-            </option>))};
-        </select>)};
+            </option>))}
+        </select>)}
         <button 
         onClick={handleGptPageClick} 
-        className='py-2 px-2 mx-4 my-2 bg-red-600 text-white rounded-lg hover:bg-red-700 font-semibold'
+        className='md:py-2 px-2 mx-2 md:mx-4 my-2 bg-red-600 text-white rounded-lg hover:bg-red-700 text-[12px] md:text-lg font-semibold'
         >
           {showGptPage ? "Home" : "GPT Search"}
           </button>
-        <img className='w-10 h-10 mt-2 rounded-lg flex justify-center'
+        <img className='w-9 md:w-11 h-8 md:h-11 mt-2 rounded-lg flex justify-center'
           src={user?.photoURL}
           alt="usericon" />
-        <button onClick={handleSignOut} className='py-2 px-2 mx-4 my-2 bg-red-600 text-white rounded-lg hover:bg-red-700 font-semibold'>Sign Out</button>
+        <button onClick={handleSignOut} className='py-2 px-2 mx-4 my-2 bg-red-600 text-white rounded-lg hover:bg-red-700 text-[12px] md:text-lg font-semibold'>Sign Out</button>
       </div>
       )}
     </div>

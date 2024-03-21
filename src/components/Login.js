@@ -93,43 +93,43 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className='absolute h-screen w-screen object-cover'>
-        <img src={BG_IMAGE} alt='BG_IMAGE' />
+      <div className='absolute'>
+        <img className='w-screen h-screen object-cover' src={BG_IMAGE} alt='BG_IMAGE' />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className='absolute w-4/12 p-12 bg-black my-32 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-80'>
-        <h1 className='font-bold text-3xl py-4'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+        className='absolute w-10/12 md:w-4/12 p-4 md:p-12  md:py-1 bg-black my-20 md:my-24 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-80'>
+        <h1 className='font-bold text-2xl md:text-3xl py-4'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
 
         {!isSignInForm && (
           <input
             ref={name}
             type="text"
             placeholder='Full Name'
-            className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />)}
+            className='p-4 my-2 md:my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />)}
         <input
           ref={email}
           type="text"
           placeholder='Email or phone number'
-          className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
+          className='p-4 my-2 md:my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
         <input
           ref={password}
           type="password"
           placeholder='Password'
-          className='p-4 my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
+          className='p-4 my-2 md:my-4 w-full bg-gray-900 bg-opacity-70 rounded-lg' />
 
         <p className='text-red-600 font-light'>{errorMessage}</p>
 
-        {isSignInForm && (<div className='flex justify-between items-center my-4 text-[12px] mb-[-10px]'>
-          <label className='flex gap-2 items-center text-lg'><input className='w-6 h-6 cursor-pointer' type='checkbox' />Remember me</label>
-          <a className='text-lg' href="/">Forgot password?</a>
+        {isSignInForm && (<div className='flex justify-between items-center my-2 text-[12px] mb-[-10px]'>
+          <label className='flex gap-2 items-center text-sm md:text-lg'><input className='w-6 h-6 cursor-pointer' type='checkbox' />Remember me</label>
+          <a className='text-sm md:text-lg' href="/">Forgot password?</a>
         </div>)}
 
         <button type='button' className='p-2 my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>
           {isSignInForm ? <span className="font-semibold">Sign In</span> : <span className="font-semibold">Sign Up</span>}
         </button>
 
-        <p className='py-4 cursor-pointer' onClick={toggleSignIn}>
+        <p className='py-2 md:py-4 cursor-pointer' onClick={toggleSignIn}>
           {isSignInForm ?
             <span className="text-gray-500">New to Netflix? <span className="text-blue-500 font-bold">Sign Up Now</span></span> :
             <span className="text-gray-500">Already registered? <span className="text-green-500 font-bold">Sign In Now</span></span>}

@@ -50,6 +50,8 @@
 - Memoization
 - Added .env file
 - Adding .env file to gitignore
+- Made Our Webite Responsive
+- Made the app responsive for mobile
 
 
 
