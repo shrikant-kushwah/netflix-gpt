@@ -8,8 +8,8 @@ const VideoTitle = ({title, overview,id}) => {
       <h1 className='text-xl md:text-5xl font-bold'>{title}</h1>
       <p className='hidden md:inline-block text-md py-4 w-1/3 font-thin'>{overview}</p>
       <div className='my-2 md:m-0'>
-        <button onClick={()=>navigate("/movie/1011985")} className='bg-white text-black py-1 md:py-2 px-2 md:px-6 text-xl rounded-md hover:bg-opacity-80'>▶ Play</button>
-        <button className='hidden md:inline-block mx-2 bg-gray-500 text-white p-2 px-8 text-xl bg-opacity-50 rounded-md hover:bg-opacity-70'>ℹ️ More Info</button>
+        <button onClick={()=>navigate("/movie/1011985")} className='bg-white text-black py-1 md:py-2 px-2 md:px-4 text-xl rounded-md hover:bg-opacity-80'>▶ Play</button>
+        <button className='hidden md:inline-block mx-2 bg-gray-500 text-white p-2 px-4 text-xl bg-opacity-50 rounded-md hover:bg-opacity-70'>ℹ️ More Info</button>
       </div>
     </div>
   );
