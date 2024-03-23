@@ -55,7 +55,7 @@ module.exports = {
 npm start
 ```
 
-
+<!-- 
 # Netflix GPT
 
 - Create React App
@@ -108,7 +108,7 @@ npm start
 - Made Our Webite Responsive
 - Made the app responsive for mobile
 
-
+-->
 
 
 ## Features
