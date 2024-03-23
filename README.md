@@ -3,6 +3,66 @@
 
 # Netflix GPT
 
+Movies recomandation with AI.
+
+## Setup
+
+- Install react app using create-react-app (CRA)
+
+```js
+npx create-react-app netflix-gpt
+```
+
+- Create `.env` file and put configure
+
+```js
+REACT_APP_BASE_URL = YOUR_APPLICATION_BASE_URL; // http://localhost:300
+REACT_APP_OPENAI_KEY = YOUR_API_KEY_WILL_HERE;
+REACT_APP_TMDB_KEY = YOUR_API_KEY_WILL_HERE;
+```
+
+- Install and init tailwind css
+
+```js
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+- Configure tailwind css in your project
+
+  `npx tailwindcss init` command will create a file `tailwind.config.js` in your project's root directory.
+  Open `tailwind.config.js` and replace all content with below code.
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+- Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+- Now you created a react app with tailwind css successfully. Now run the below command on your terminal to start your local development server.
+
+```js
+npm start
+```
+
+
+# Netflix GPT
+
 - Create React App
 - Configured TailwindCSS
 - Header
@@ -56,50 +116,27 @@
 
 
 
-
 ## Features
 
 - Login/Sign Up
-       - Sign In /Sign Up Form
-       - redirect to Browse Page
+ - Sign In /Sign Up Form
+  - redirect to Browse Page
 - Browse (after authentication)
-       - Header
-       - Main Movie
-             - Trailer in Background
-             - Title & Description
-             - MovieSuggestions
-                    - MovieLists * N
+  - Header
+  - Main Movie
+    - Trailer in Background
+    - Title & Description
+    - MovieSuggestions
+    - MovieLists * N
 - Netflix-GPT
         - Search Bar
         - Movie Suggestions
 
 
 
+## Live Link
+Live link of Netflix-GPT : [Live Demo](https://github.com/facebook/create-react-app).
 
-
-
-
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
