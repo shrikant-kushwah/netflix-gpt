@@ -3,7 +3,7 @@
 
 # Netflix GPT
 
-Movies recomandation with AI.
+Movies Recomandation with GPT Search.
 
 ## Setup
 
@@ -15,11 +15,6 @@ npx create-react-app netflix-gpt
 
 - Create `.env` file and put configure
 
-```js
-REACT_APP_BASE_URL = YOUR_APPLICATION_BASE_URL; // http://localhost:300
-REACT_APP_OPENAI_KEY = YOUR_API_KEY_WILL_HERE;
-REACT_APP_TMDB_KEY = YOUR_API_KEY_WILL_HERE;
-```
 
 - Install and init tailwind css
 
