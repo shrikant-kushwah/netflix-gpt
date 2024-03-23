@@ -3,7 +3,7 @@
 
 # Netflix GPT
 
-Movies Recomandation with GPT Search.
+Movies Recommendation with GPT Search.
 
 ## Setup
 
