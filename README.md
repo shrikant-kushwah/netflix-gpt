@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+## Live Link 👇
+Live link of Netflix-GPT : [Live Demo](https://github.com/facebook/create-react-app).
+
+## Screenshot
+# Sign Up Form
+<img width="960" alt="signUpform" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/9f8bfa93-9d56-4b0b-bb5e-cc51eb0c1fee">
+
+# Sign In Form
+<img width="960" alt="signInform" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/f64c0856-72e9-4072-a12d-d586b9fdd8cf">
+
+
 
 
 # Netflix GPT
@@ -129,8 +139,7 @@ npm start
 
 
 
-## Live Link 👇
-Live link of Netflix-GPT : [Live Demo](https://github.com/facebook/create-react-app).
+
 
 
 ### `npm run build`
