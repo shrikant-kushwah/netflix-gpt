@@ -1,12 +1,24 @@
-## Live Link 👇
+# Live Link 👇
 Live link of Netflix-GPT : [Live Demo](https://github.com/facebook/create-react-app).
 
-## Screenshot
-# Sign Up Form
+# Screenshot
+## Sign Up Form
 <img width="960" alt="signUpform" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/9f8bfa93-9d56-4b0b-bb5e-cc51eb0c1fee">
 
-# Sign In Form
+## Sign In Form
 <img width="960" alt="signInform" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/f64c0856-72e9-4072-a12d-d586b9fdd8cf">
+
+## Browse Page
+<img width="960" alt="browsePage" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/685caa4f-4894-4b55-8b8f-15c04ef85130">
+
+## GPT Search Page
+<img width="960" alt="gptSearchBlankPage" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/bcb15c15-a174-4f65-ba44-32c113da3657">
+
+## GPT Search Result Page
+<img width="960" alt="gptSearchResult" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/66781fbd-62f6-4f6d-9251-fb842e645560">
+
+
+
 
 
 
