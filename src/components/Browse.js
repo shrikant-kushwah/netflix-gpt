@@ -12,6 +12,7 @@ const Browse = () => {
 
   const showGptPage = useSelector((store) => store.gpt.showGptPage);
 
+  
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();
