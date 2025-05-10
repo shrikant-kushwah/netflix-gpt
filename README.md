@@ -15,7 +15,7 @@
 <img width="960" alt="gptSearchResult" src="https://github.com/shrikant-kushwah/netflix-gpt/assets/96473205/66781fbd-62f6-4f6d-9251-fb842e645560">
 
 # Live Link 👇
-Live link of Netflix-GPT : [Live Demo](https://github.com/facebook/create-react-app).
+Live link of Netflix-GPT : [Live Demo](https://netflixgpt-rho.vercel.app/).
 
 
 
